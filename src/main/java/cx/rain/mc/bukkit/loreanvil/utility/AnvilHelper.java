@@ -17,7 +17,7 @@ public class AnvilHelper {
         StringBuffer buffer = new StringBuffer();
         Matcher matcher = HEX_COLOR.matcher(str);
 
-        while(matcher.find()) {
+        while (matcher.find()) {
             ChatColor color = ChatColor.of("#" + matcher.group(1));
             matcher.appendReplacement(buffer, color.toString());
         }
@@ -47,7 +47,8 @@ public class AnvilHelper {
         List<String> lores;
         if (stack.getItemMeta().hasLore()) {
             lores = stack.getItemMeta().getLore();
-        } else {
+        }
+        else {
             lores = new ArrayList<>();
         }
         lores.add(colored);
@@ -69,7 +70,8 @@ public class AnvilHelper {
         if (stack.getItemMeta().hasLore()) {
             lores = stack.getItemMeta().getLore();
             lores.remove(lores.size() - 1);
-        } else {
+        }
+        else {
             lores = new ArrayList<>();
         }
 
@@ -89,11 +91,13 @@ public class AnvilHelper {
                     ItemStack result = setName(left, text, parseColor);
                     return new Tuple<>(result, EnumFlag.RENAME);
                 }
-            } else if (right.isSimilar(new ItemStack(Material.PAPER))) {
+            }
+            else if (right.isSimilar(new ItemStack(Material.PAPER))) {
                 ItemStack result = appendLore(left, text, parseColor);
                 return new Tuple<>(result, EnumFlag.ADD_LORE);
             }
-        } else {
+        }
+        else {
             if (right != null) {
                 ItemStack result = removeLore(right);
                 return new Tuple<>(result, EnumFlag.REMOVE_LORE);

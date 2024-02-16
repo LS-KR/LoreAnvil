@@ -37,8 +37,8 @@ public class EventInventoryClick implements Listener {
         }
 
         if (!event.getWhoClicked().hasPermission("loreanvil.name")
-            && !event.getWhoClicked().hasPermission("loreanvil.lore")
-            && !event.getWhoClicked().hasPermission("loreanvil.remove")) {
+                && !event.getWhoClicked().hasPermission("loreanvil.lore")
+                && !event.getWhoClicked().hasPermission("loreanvil.remove")) {
             return;
         }
 
@@ -83,13 +83,15 @@ public class EventInventoryClick implements Listener {
 
                 if (event.isShiftClick()) {
                     event.getWhoClicked().getInventory().addItem(result.left);
-                } else {
+                }
+                else {
                     event.getWhoClicked().setItemOnCursor(result.left);
                 }
 
                 if (result.right == EnumFlag.RENAME || result.right == EnumFlag.ADD_LORE) {
                     anvil.setItem(0, null);
-                } else if (result.right == EnumFlag.REMOVE_LORE) {
+                }
+                else if (result.right == EnumFlag.REMOVE_LORE) {
                     anvil.setItem(1, null);
                     anvil.setRepairCost(0);
                 }

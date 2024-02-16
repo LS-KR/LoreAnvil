@@ -3,7 +3,7 @@ version: '${version}'
 main: cx.rain.mc.bukkit.loreanvil.LoreAnvil
 api-version: 1.13
 prefix: LoreAnvil
-authors: [qyl27]
+authors: [ qyl27 ]
 description: A bukkit plugin for changing name or lore of an item stack with anvil.
 website: https://github.com/qyl27/LoreAnvil
 permissions:
