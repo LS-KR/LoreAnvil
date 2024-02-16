@@ -7,8 +7,8 @@ group = pluginGroup
 version = pluginVersion
 archivesBaseName = 'lore-anvil'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = '1.17'
+targetCompatibility = '1.17'
 
 repositories {
     mavenCentral()

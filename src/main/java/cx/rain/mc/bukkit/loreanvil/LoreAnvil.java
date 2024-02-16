@@ -1,5 +1,6 @@
 package cx.rain.mc.bukkit.loreanvil;
 
+import cx.rain.mc.bukkit.loreanvil.event.EventFixItem;
 import cx.rain.mc.bukkit.loreanvil.event.EventInventoryClick;
 import cx.rain.mc.bukkit.loreanvil.event.EventPrepareAnvil;
 import org.bukkit.Bukkit;
@@ -19,6 +20,7 @@ public final class LoreAnvil extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(new EventInventoryClick(), this);
         Bukkit.getPluginManager().registerEvents(new EventPrepareAnvil(), this);
+        Bukkit.getPluginManager().registerEvents(new EventFixItem(), this);
     }
 
     @Override
